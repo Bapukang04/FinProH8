@@ -12,10 +12,10 @@ import './styles/index.css';
 const App = () => {
   const dispatch = useDispatch();
   const { movies, loading, error } = useSelector((state) => state.movies);
-  const param_query = 'batman'
+  // const param_query = 'movie,series,episode'
 
   useEffect(() => {
-    dispatch(getListFilm({param_query}));
+    dispatch(getListFilm('movie,episode,series'));
   }, [dispatch]);
 
   const handleSearch = (query) => {
